@@ -1,0 +1,251 @@
+@import 'bootstrap.min',
+'bootstrap-responsive.min';
+
+@font-face {
+    font-family: 'BloklettersPotlood';
+    src: url('css/Blokletters-Potlood-webfont.eot');
+    src: url('css/Blokletters-Potlood-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/Blokletters-Potlood-webfont.woff') format('woff'),
+         url('css/Blokletters-Potlood-webfont.ttf') format('truetype'),
+         url('css/Blokletters-Potlood-webfont.svg#BloklettersPotlood') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BloklettersBalpen';
+    src: url('css/Blokletters-Balpen-webfont.eot');
+    src: url('css/Blokletters-Balpen-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/Blokletters-Balpen-webfont.woff') format('woff'),
+         url('css/Blokletters-Balpen-webfont.ttf') format('truetype'),
+         url('css/Blokletters-Balpen-webfont.svg#BloklettersBalpen') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BloklettersViltstift';
+    src: url('css/Blokletters-Viltstift-webfont.eot');
+    src: url('css/Blokletters-Viltstift-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/Blokletters-Viltstift-webfont.woff') format('woff'),
+         url('css/Blokletters-Viltstift-webfont.ttf') format('truetype'),
+         url('css/Blokletters-Viltstift-webfont.svg#BloklettersViltstift') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+//These are a mix of one's Ive found in CSS tricks, CodeSchool as well as some I've found useful for cross-browser css.
+
+//I've alphabetized and stretched the mixins horizontally to allow users to be able to quickly see all the mixin titles.
+
+// ============================== //
+//     Alphabetized Mixins        //
+// ============================== //
+
+@mixin border-radius ($rad) {-moz-border-radius: ($rad);-webkit-border-radius: ($rad); border-radius: ($rad);-khtml-border-radius:($rad);}
+
+@mixin center-align ($width) {width: ($width); margin: 0 auto;}
+
+@mixin helvetica {font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;}
+
+@mixin opacity ($o) {filter: alpha(opacity=($o*100)); -moz-opacity: ($o);-khtml-opacity: ($o);opacity: ($o);}
+
+@mixin horizontal-navigation ($padding) { 
+	ul {list-style-type:none;}
+	a {text-decoration:none}
+	li {display:inline-block; padding:($padding);}	
+}
+  
+@mixin top-shadow {
+//this is meant to be placed under the body.  Found from CSS tricks.
+  &:before{content: "";position: fixed;top: -10px;left: 0;width: 100%;height: 10px;-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);-moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8); box-shadow: 0px 0px 10px rgba(0,0,0,.8); z-index: 100;}
+    }  
+
+@mixin transition ($s) {-moz-transition:($s); -webkit-transition:($s);-o-transition:($s);transition:($s);}  
+
+// ============================== //
+//           ! Colors             //
+// ============================== //
+
+$primary: #000;
+$secondary: #FFF;
+
+body {
+	font-family: "Open Sans";
+	// background-image: url('../img/other-bg.jpg');
+	color:#F3f3f3;
+	background-image: linear-gradient(top, rgb(255,255,255) 23%, rgb(10,176,55) 91%);
+background-image: -o-linear-gradient(top, rgb(255,255,255) 23%, rgb(10,176,55) 91%);
+background-image: -moz-linear-gradient(top, rgb(255,255,255) 23%, rgb(10,176,55) 91%);
+background-image: -webkit-linear-gradient(top, rgb(255,255,255) 23%, rgb(10,176,55) 91%);
+background-image: -ms-linear-gradient(top, rgb(255,255,255) 23%, rgb(10,176,55) 91%);
+
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.23, rgb(255,255,255)),
+	color-stop(0.91, rgb(10,176,55))
+);
+	color:#525050;
+}
+
+h1 {
+	text-align: center;
+	color: #F3F3F3;
+	margin-top: -.5em;
+	font-size: 5em;
+	font-weight: normal;
+	margin-bottom: .5em;
+	text-shadow: 2px 3px 0px #5e577e;
+	line-height:1.1em;
+}
+
+h2 {
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	font-family:BloklettersBalpen;
+	text-shadow: 2px 2px 0px #5E577E;
+	color:#E7E7E7;
+}
+
+h3 {
+	font-size: 30px;
+	font-weight: 600;
+	color: #666;
+	text-decoration: none;
+	// font-family: BloklettersPotlood;
+	// font-size: 2em;
+	// font-weight: normal;
+	// padding: .5em;
+	// background: rgba(112, 134, 112, 0.53);
+	// border-radius: 1em;
+	// width: 9em;
+	// box-shadow: 1px 1px 1px #383838;
+	// border: 1px solid #05530E;
+	// text-align: center;
+}
+
+h4 {
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 1em;
+	font-family: BloklettersPotlood;
+	margin-top: 2em;
+	border-radius: 10px;
+	padding-bottom: .5em;
+	font-size: 4em;
+	font-style: normal;
+}
+
+blockquote {
+	font-family: "Open Sans";
+	font-size: 1.3em;
+
+}
+
+div.courses {
+	background:url('../img/courses.jpg');
+	h4{
+		color:gray;
+	}
+}
+
+#quote{
+	text-align:left;
+}
+
+#next {
+	color: yellow;
+	background: none;
+	border: none;
+	font-size: 2em;
+	padding: .5em;
+	vertical-align: middle;
+	margin-top: 1em;
+}
+
+#quoteAuthor {
+	font-family: BloklettersViltstift;
+	font-size: 1em;
+	margin-left:20px;
+	text-align: left;
+}
+
+	.top-hover{
+		background-image:url('../img/exclusive_paper/exclusive_paper.png');
+		border-top-left-radius: 1em; 
+		border-top-right-radius: 1em;
+	}
+.top {
+	background-image: url('../img/header-bg.jpg');
+
+}
+.top2 {
+	background:white;
+	color:black;
+	border-bottom: 16px solid rgba(115, 8, 156, 0.61)
+}
+@media (max-width:767px) {
+	body{
+		padding-right:0px;
+		padding-left:0px;
+	}
+	h1 {
+		font-size:4em;
+	}
+	h4 {
+		font-size: 2.5em;
+	}
+	.span4 img {
+		margin-top:1em;
+	}
+}
+
+.spacer {
+	margin-bottom:60px;
+}
+.carolina {
+	background: #16C916;
+color: white;
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
+padding: .5em 1em;
+position: relative;
+top: 6px;
+@include transition (.3s);
+margin-right: 2em;
+	&:hover{
+		color: white;
+		background: #561594;
+		text-decoration: none;
+
+	}
+}
+
+ul.bottom {
+	margin-top: 1.5em;
+	li a {
+		color:white;
+		&:hover {
+			background:none;
+		}
+	}
+
+}
+.subjects {
+	margin-bottom:3em;
+}
+.testimonial-slides div.span10.offset1 {
+	position: relative;
+	right: 10px;
+}
+
+#footer {
+	background-image: url('../img/header-bg.jpg');
+}

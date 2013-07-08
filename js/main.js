@@ -1,21 +1,4 @@
 $(document).ready(function() {
-//To make about and contact hover down
-	// $("#about").hover(
-	// 	  function () {
-	// 	    $("#about-below").slideDown("slow")
-	// 	  },
-	// 	  function () {
-	// 	    $("#about-below").slideUp("fast")
-	// 	  }
-	// );
-	// $("#contact").hover(
-	// 	  function () {
-	// 	    $("#contact-below").slideDown("slow")
-	// 	  },
-	// 	  function () {
-	// 	    $("#contact-below").slideUp("fast")
-	// 	  }
-	// );
 //To do the same thing as above but on click
 	$("#about").click(function(){
 		$("#contact-below").slideUp("fast", function(){
@@ -28,14 +11,18 @@ $(document).ready(function() {
 		})
 	})
 //To make blockquote cycle on click
-		 //  var arr = ["We have known Achamma Koshy for almost 20 years now.  Four of our five children have been blessed with the opportunity to learn with and from Mrs. Koshy. She is a passionate educator who shapes each individual child, encouraging him or her to become a confident learner.  Mrs. Koshy has worked to maximize our children’s unique strengths and to provide them with strategies to support their areas of challenge.  We wholeheartedly recommend Mrs. Koshy as a highly qualified and caring professional with expertise across all curricular areas.","Mrs. Koshy is a miracle worker.  She took our little girl from way-behind in math and reading to way-ahead in just a few short months.  She seems to be able to bring out the best in children and we warmly recommend her to any parents."];
-		 //  var arrAuthor = ["Dr. Andrea Romani, MD, PhD Associate Professor, Case Western Reserve University & Jeanne M. Romani, EdS, CCC/SLP, ECIS", "Dr. Steven Brown, Professor Graduate School of Education, Kent State University and Casey Brown, retired middle school teacher (30 years), Cuyahoga Falls Schools"]
-		 //  var index = 0;
-		 //  $('#next').click(function(){ 
-		 //    $('#quote').text(arr[index]);
-		 //    $('#quoteAuthor').text(arrAuthor[index]);  
-		 //    index = (index + 1) % arr.length ;
-		 // });
+
+// Before making images change on hover, preload them
+var preloads = [
+          '/img/mathematicscolor.jpg',
+          '/img/SATcolor.jpg',
+          '/img/readingcolor.jpg'
+      ];
+
+$(preloads).each(function(){
+    $('<img />')[0].src = this;
+});
+
 //To make images change on hover
   $('.chama').hover(
       function(){var oldsource = $(this).attr("src");
