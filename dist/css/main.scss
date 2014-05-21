@@ -3,11 +3,11 @@
 
 @font-face {
     font-family: 'BloklettersPotlood';
-    src: url('css/Blokletters-Potlood-webfont.eot');
-    src: url('css/Blokletters-Potlood-webfont.eot?#iefix') format('embedded-opentype'),
-         url('css/Blokletters-Potlood-webfont.woff') format('woff'),
-         url('css/Blokletters-Potlood-webfont.ttf') format('truetype'),
-         url('css/Blokletters-Potlood-webfont.svg#BloklettersPotlood') format('svg');
+    src: url('Blokletters-Potlood-webfont.eot');
+    src: url('Blokletters-Potlood-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Blokletters-Potlood-webfont.woff') format('woff'),
+         url('Blokletters-Potlood-webfont.ttf') format('truetype'),
+         url('Blokletters-Potlood-webfont.svg#BloklettersPotlood') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -15,11 +15,11 @@
 
 @font-face {
     font-family: 'BloklettersBalpen';
-    src: url('css/Blokletters-Balpen-webfont.eot');
-    src: url('css/Blokletters-Balpen-webfont.eot?#iefix') format('embedded-opentype'),
-         url('css/Blokletters-Balpen-webfont.woff') format('woff'),
-         url('css/Blokletters-Balpen-webfont.ttf') format('truetype'),
-         url('css/Blokletters-Balpen-webfont.svg#BloklettersBalpen') format('svg');
+    src: url('Blokletters-Balpen-webfont.eot');
+    src: url('Blokletters-Balpen-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Blokletters-Balpen-webfont.woff') format('woff'),
+         url('Blokletters-Balpen-webfont.ttf') format('truetype'),
+         url('Blokletters-Balpen-webfont.svg#BloklettersBalpen') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -27,11 +27,11 @@
 
 @font-face {
     font-family: 'BloklettersViltstift';
-    src: url('css/Blokletters-Viltstift-webfont.eot');
-    src: url('css/Blokletters-Viltstift-webfont.eot?#iefix') format('embedded-opentype'),
-         url('css/Blokletters-Viltstift-webfont.woff') format('woff'),
-         url('css/Blokletters-Viltstift-webfont.ttf') format('truetype'),
-         url('css/Blokletters-Viltstift-webfont.svg#BloklettersViltstift') format('svg');
+    src: url('Blokletters-Viltstift-webfont.eot');
+    src: url('Blokletters-Viltstift-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Blokletters-Viltstift-webfont.woff') format('woff'),
+         url('Blokletters-Viltstift-webfont.ttf') format('truetype'),
+         url('Blokletters-Viltstift-webfont.svg#BloklettersViltstift') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -156,10 +156,6 @@ div.courses {
 	}
 }
 
-#quote{
-	text-align:left;
-}
-
 #next {
 	color: yellow;
 	background: none;
@@ -170,18 +166,12 @@ div.courses {
 	margin-top: 1em;
 }
 
-#quoteAuthor {
-	font-family: BloklettersViltstift;
-	font-size: 1em;
-	margin-left:20px;
-	text-align: left;
+.top-hover{
+	background-image:url('../img/exclusive_paper/exclusive_paper.png');
+	border-top-left-radius: 1em; 
+	border-top-right-radius: 1em;
 }
 
-	.top-hover{
-		background-image:url('../img/exclusive_paper/exclusive_paper.png');
-		border-top-left-radius: 1em; 
-		border-top-right-radius: 1em;
-	}
 .top {
 	background-image: url('../img/header-bg.jpg');
 
@@ -241,9 +231,22 @@ ul.bottom {
 .subjects {
 	margin-bottom:3em;
 }
-.testimonial-slides div.span10.offset1 {
-	position: relative;
-	right: 10px;
+.testimonial-slides {
+	div.span10.offset1 {
+		position: relative;
+		right: 10px;
+	}
+	blockquote {
+		text-align: left;
+	}
+	
+	p {
+		font-family: 'BloklettersViltstift';
+		font-size: 1em;
+		margin-left: 20px;
+		text-align: left;
+	}
+
 }
 
 #footer {
