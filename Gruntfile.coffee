@@ -9,11 +9,11 @@ module.exports = (grunt) ->
 					authKey: 'key1'
 				src: 'dist'
 				dest: ''
-				# exclusions: [
-				# 	'css',
-				# 	'img',
-				# 	'js'
-				# ]
+				exclusions: [
+					'css',
+					'img',
+					'js'
+				]
 
 		sass:
 			dist:
@@ -35,4 +35,4 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-ftp-deploy')
 	grunt.registerTask('default', ['watch'])
-	grunt.registerTask('deploy', ['sass','sftp-deploy'])
+	grunt.registerTask('deploy', ['sass','ftp-deploy'])
